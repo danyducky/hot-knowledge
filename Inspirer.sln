@@ -11,6 +11,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
 	ProjectSection(SolutionItems) = preProject
 		src\.editorconfig = src\.editorconfig
+		docker\.dockerignore = docker\.dockerignore
 	EndProjectSection
 EndProject
 Global
