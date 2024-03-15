@@ -2,7 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{ABC6A127-42E9-4BB0-8BD3-208D0A959A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Messaging", "src\building-blocks\Inspirer.Messaging\Inspirer.Messaging.csproj", "{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Application", "src\building-blocks\Inspirer.Application\Inspirer.Application.csproj", "{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Contracts", "src\building-blocks\Inspirer.Contracts\Inspirer.Contracts.csproj", "{4B2BF411-7882-45A6-88F7-F64AA36B5870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
+	ProjectSection(SolutionItems) = preProject
+		src\.editorconfig = src\.editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,11 +20,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
+		{4B2BF411-7882-45A6-88F7-F64AA36B5870} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
+		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2BF411-7882-45A6-88F7-F64AA36B5870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2BF411-7882-45A6-88F7-F64AA36B5870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2BF411-7882-45A6-88F7-F64AA36B5870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2BF411-7882-45A6-88F7-F64AA36B5870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
