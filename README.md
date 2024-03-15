@@ -1,1 +1,2 @@
-# Hot Knowledge
+# Inspirer 
+Ultimate Open Source Task Manager
