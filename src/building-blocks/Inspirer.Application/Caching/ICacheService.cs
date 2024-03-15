@@ -23,13 +23,13 @@ public interface ICacheService
     Task<T> GetAsync<T>(string key, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Refresh?.
+    /// Refresh cache by given key.
     /// </summary>
     /// <param name="key">Key.</param>
     void Refresh(string key);
 
     /// <summary>
-    /// Refresh?
+    /// Refresh cache by given key asynchronously.
     /// </summary>
     /// <param name="key">Key.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
