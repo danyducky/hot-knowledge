@@ -1,6 +1,6 @@
 version: "3.9"
 
-name: "inspirer"
+name: "inspirer-services"
 
 services:
 
@@ -15,5 +15,29 @@ services:
       - rabbitmq:/var/lib/rabbitmq/
     restart: unless-stopped
 
+  # Redis service.
+  redis:
+    container_name: "inspirer-redis"
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+    restart: unless-stopped
+
+  # Postgres service.
+  postgres:
+    container_name: "inspirer-postgres"
+    image: "postgres"
+    environment:
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/data/postgres
+    restart: unless-stopped
+
 volumes:
   rabbitmq:
+  redis:
+  postgres:
