@@ -19,7 +19,7 @@ public static class InfrastructureExtensions
     /// <param name="services">Services collection.</param>
     /// <param name="options">Infrastructure options.</param>
     /// <param name="consumerAssembly">Reference to consumer assembly.</param>
-    public static void AddBuildingBlocks(IServiceCollection services, InfrastructureOptions options,
+    public static void AddBuildingBlocks(this IServiceCollection services, InfrastructureOptions options,
         Assembly consumerAssembly)
     {
         services.AddMessageBus(options.RabbitMqOptions, consumerAssembly);
