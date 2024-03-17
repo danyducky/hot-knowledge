@@ -15,12 +15,13 @@ services:
       - Redis__Host=redis:6379
     ports:
       - "5050:8080"
-    networks:
-      inspirer-network:
     depends_on:
-      - rabbitmq
-      - redis
-      - postgres
+      redis:
+        condition: service_started
+      postgres:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy # Start Identity API when RabbitMQ is available.
   
   # ----------------------------
   # Additional services section.
@@ -31,18 +32,19 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-    networks:
-      inspirer-network:
     volumes:
       - rabbitmq:/var/lib/rabbitmq/
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "status" ] # Add a health check to know when service is available.
+      interval: 5s
+      timeout: 20s
+      retries: 5
     restart: unless-stopped
 
   redis:
     container_name: "inspirer-redis"
     ports:
       - "6379:6379"
-    networks:
-      inspirer-network:
     volumes:
       - redis:/data
     restart: unless-stopped
@@ -59,9 +61,6 @@ services:
       - postgres:/data/postgres
     restart: unless-stopped
     
-networks:
-  inspirer-network:
-
 volumes:
   rabbitmq:
   redis:
