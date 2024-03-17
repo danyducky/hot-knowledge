@@ -10,7 +10,6 @@ services:
   identity.api:
     container_name: "inspirer-identity-api"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
       - RabbitMQ__Host=rabbitmq
       - Redis__Host=redis:6379
     ports:
