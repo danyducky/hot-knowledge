@@ -21,7 +21,7 @@ public static class InfrastructureExtensions
         {
             RabbitMqOptions = configuration.GetSection("RabbitMq").Get<RabbitMqOptions>(),
             RedisOptions = configuration.GetSection("Redis").Get<RedisOptions>(),
-        }, typeof(Program).Assembly);
+        }, consumerAssembly: typeof(Program).Assembly);
 
         services.AddDbContext(configuration);
     }
