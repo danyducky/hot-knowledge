@@ -15,7 +15,7 @@ public static class InfrastructureExtensions
     /// </summary>
     /// <param name="services">Services collection.</param>
     /// <param name="configuration">Application configuration.</param>
-    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    internal static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddBuildingBlocks(new InfrastructureOptions()
         {
