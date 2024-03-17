@@ -17,12 +17,6 @@ public static class InfrastructureExtensions
     /// <param name="configuration">Application configuration.</param>
     internal static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddBuildingBlocks(new InfrastructureOptions()
-        {
-            RabbitMqOptions = configuration.GetSection("RabbitMq").Get<RabbitMqOptions>(),
-            RedisOptions = configuration.GetSection("Redis").Get<RedisOptions>(),
-        }, consumerAssembly: typeof(Program).Assembly);
-
         services.AddDbContext(configuration);
     }
 

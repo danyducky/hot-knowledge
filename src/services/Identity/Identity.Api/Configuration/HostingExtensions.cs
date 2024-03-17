@@ -1,5 +1,6 @@
 using Identity.Api.Infrastructure.DI;
 using Inspirer.Infrastructure.Extensions;
+using Inspirer.Infrastructure.Options;
 
 namespace Identity.Api.Configuration;
 
@@ -15,6 +16,12 @@ public static class HostingExtensions
     /// <returns>Web application.</returns>
     public static WebApplication BuildApplication(this WebApplicationBuilder builder)
     {
+        builder.Services.AddBuildingBlocks(new InfrastructureOptions
+        {
+            RabbitMqOptions = builder.Configuration.GetSection("RabbitMq").Get<RabbitMqOptions>(),
+            RedisOptions = builder.Configuration.GetSection("Redis").Get<RedisOptions>(),
+        }, consumerAssembly: typeof(Program).Assembly);
+
         builder.Services.AddInfrastructure(builder.Configuration);
 
         builder.Services.AddMapper();
