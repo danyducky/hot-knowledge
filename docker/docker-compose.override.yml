@@ -1,0 +1,68 @@
+version: "3.9"
+
+name: "inspirer-applications"
+
+services:
+  # ----------------------
+  # Microservices section.
+  # ----------------------
+  
+  identity.api:
+    container_name: "inspirer-identity-api"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RabbitMQ__Host=rabbitmq
+      - Redis__Host=redis:6379
+    ports:
+      - "5050:8080"
+    networks:
+      inspirer-network:
+    depends_on:
+      - rabbitmq
+      - redis
+      - postgres
+  
+  # ----------------------------
+  # Additional services section.
+  # ----------------------------
+  
+  rabbitmq:
+    container_name: "inspirer-rabbitmq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      inspirer-network:
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq/
+    restart: unless-stopped
+
+  redis:
+    container_name: "inspirer-redis"
+    ports:
+      - "6379:6379"
+    networks:
+      inspirer-network:
+    volumes:
+      - redis:/data
+    restart: unless-stopped
+
+  postgres:
+    container_name: "inspirer-postgres"
+    environment:
+      POSTGRES_USER: inspirer
+      POSTGRES_PASSWORD: 1
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/data/postgres
+    restart: unless-stopped
+    
+networks:
+  inspirer-network:
+
+volumes:
+  rabbitmq:
+  redis:
+  postgres:

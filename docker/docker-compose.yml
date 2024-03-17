@@ -1,10 +1,18 @@
 ﻿version: "3.9"
 
-name: "inspirer-applications"
-
 services:
+  
   identity.api:
-    image: identity.api
+    image: ${DOCKER_REGISTRY-}identity.api
     build:
-      context: .
+      context: ../
       dockerfile: src/services/Identity/Identity.Api/Dockerfile
+      
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    
+  redis:
+    image: "redis:alpine"
+    
+  postgres:
+    image: "postgres"
