@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Contracts", "src\b
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
 	ProjectSection(SolutionItems) = preProject
 		src\.editorconfig = src\.editorconfig
 		docker\.dockerignore = docker\.dockerignore
