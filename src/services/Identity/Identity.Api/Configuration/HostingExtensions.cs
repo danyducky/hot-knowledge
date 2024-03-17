@@ -18,7 +18,7 @@ public static class HostingExtensions
     {
         builder.Services.AddBuildingBlocks(new InfrastructureOptions
         {
-            RabbitMqOptions = builder.Configuration.GetSection("RabbitMq").Get<RabbitMqOptions>(),
+            RabbitMqOptions = builder.Configuration.GetSection("RabbitMQ").Get<RabbitMqOptions>(),
             RedisOptions = builder.Configuration.GetSection("Redis").Get<RedisOptions>(),
         }, consumerAssembly: typeof(Program).Assembly);
 
