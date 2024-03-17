@@ -1,0 +1,10 @@
+﻿version: "3.9"
+
+name: "inspirer-applications"
+
+services:
+  identity.api:
+    image: identity.api
+    build:
+      context: .
+      dockerfile: src/services/Identity/Identity.Api/Dockerfile
