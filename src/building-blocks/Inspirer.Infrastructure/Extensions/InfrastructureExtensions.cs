@@ -22,6 +22,7 @@ public static class InfrastructureExtensions
     public static void AddBuildingBlocks(this IServiceCollection services, InfrastructureOptions options,
         Assembly consumerAssembly)
     {
+        services.AddMiddlewares();
         services.AddMessageBus(options.RabbitMqOptions, consumerAssembly);
         services.AddRedisCache(options.RedisOptions);
     }
