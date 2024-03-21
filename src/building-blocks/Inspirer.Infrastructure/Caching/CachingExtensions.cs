@@ -1,6 +1,7 @@
 using Inspirer.Application.Caching;
 using Inspirer.Infrastructure.Options;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 
 namespace Inspirer.Infrastructure.Caching;
 
@@ -18,11 +19,12 @@ public static class CachingExtensions
     {
         services.AddStackExchangeRedisCache(opt =>
         {
-            opt.Configuration = options.ConnectionString;
-            opt.ConfigurationOptions = new StackExchange.Redis.ConfigurationOptions()
+            opt.ConfigurationOptions = new ConfigurationOptions
             {
+                EndPoints = { options.Host },
+                Password = options.Password,
+
                 AbortOnConnectFail = true,
-                EndPoints = { options.ConnectionString }
             };
         });
 

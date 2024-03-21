@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Inspirer.Infrastructure.Middlewares;
 
@@ -7,6 +8,15 @@ namespace Inspirer.Infrastructure.Middlewares;
 /// </summary>
 internal static class MiddlewareExtensions
 {
+    /// <summary>
+    /// Adds application middlewares.
+    /// </summary>
+    /// <param name="services">Services collection.</param>
+    public static void AddMiddlewares(this IServiceCollection services)
+    {
+        services.AddScoped<ExceptionMiddleware>();
+    }
+
     /// <summary>
     /// Use application middlewares.
     /// </summary>

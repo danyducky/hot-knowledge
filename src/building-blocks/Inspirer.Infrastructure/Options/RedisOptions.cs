@@ -6,7 +6,12 @@ namespace Inspirer.Infrastructure.Options;
 public record RedisOptions
 {
     /// <summary>
-    /// Redis connection string.
+    /// Redis host.
     /// </summary>
-    public required string ConnectionString { get; init; }
+    public required string Host { get; init; }
+
+    /// <summary>
+    /// Redis password.
+    /// </summary>
+    public required string Password { get; init; }
 }

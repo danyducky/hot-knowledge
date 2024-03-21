@@ -8,16 +8,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Contracts", "src\b
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
 	ProjectSection(SolutionItems) = preProject
 		src\.editorconfig = src\.editorconfig
 		docker\.dockerignore = docker\.dockerignore
+		docker\docker-compose-services.yml = docker\docker-compose-services.yml
+		docker\docker-compose.yml = docker\docker-compose.yml
+		docker\docker-compose.override.yml = docker\docker-compose.override.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{3E0F79EB-5ABE-44DE-AE4D-4ACA1CC501F8}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E7FA8103-9B6F-4D8B-A41A-FB6D08FE7176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "src\services\Identity\Identity.Api\Identity.Api.csproj", "{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.DataAccess", "src\services\Identity\Identity.DataAccess\Identity.DataAccess.csproj", "{3D2D793F-80B1-49E4-93BC-54469581A7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\services\Identity\Identity.Domain\Identity.Domain.csproj", "{6C045C85-DC2A-4495-8397-EA69C858449D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{F33D3732-29D6-46E2-BB75-0A30F87EA83A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +41,10 @@ Global
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
 		{4B2BF411-7882-45A6-88F7-F64AA36B5870} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
 		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593} = {ABC6A127-42E9-4BB0-8BD3-208D0A959A55}
+		{F33D3732-29D6-46E2-BB75-0A30F87EA83A} = {E7FA8103-9B6F-4D8B-A41A-FB6D08FE7176}
+		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
+		{6C045C85-DC2A-4495-8397-EA69C858449D} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
+		{3D2D793F-80B1-49E4-93BC-54469581A7DD} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +59,17 @@ Global
 		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2D793F-80B1-49E4-93BC-54469581A7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2D793F-80B1-49E4-93BC-54469581A7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2D793F-80B1-49E4-93BC-54469581A7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2D793F-80B1-49E4-93BC-54469581A7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C045C85-DC2A-4495-8397-EA69C858449D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C045C85-DC2A-4495-8397-EA69C858449D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C045C85-DC2A-4495-8397-EA69C858449D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C045C85-DC2A-4495-8397-EA69C858449D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
