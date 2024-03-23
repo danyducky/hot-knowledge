@@ -2,11 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{ABC6A127-42E9-4BB0-8BD3-208D0A959A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Application", "src\web\building-blocks\Inspirer.Application\Inspirer.Application.csproj", "{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Application", "src\server\building-blocks\Inspirer.Application\Inspirer.Application.csproj", "{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Contracts", "src\web\building-blocks\Inspirer.Contracts\Inspirer.Contracts.csproj", "{4B2BF411-7882-45A6-88F7-F64AA36B5870}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Contracts", "src\server\building-blocks\Inspirer.Contracts\Inspirer.Contracts.csproj", "{4B2BF411-7882-45A6-88F7-F64AA36B5870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\web\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\server\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{EAAF1EA8-9064-422B-9E0A-7EA4B5AE5593}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7919C206-1526-4DBB-99C8-A7AC68FFA518}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,13 +24,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E7FA8103-9B6F-4D8B-A41A-FB6D08FE7176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "src\web\services\Identity\Identity.Api\Identity.Api.csproj", "{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "src\server\services\Identity\Identity.Api\Identity.Api.csproj", "{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.DataAccess", "src\web\services\Identity\Identity.DataAccess\Identity.DataAccess.csproj", "{3D2D793F-80B1-49E4-93BC-54469581A7DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.DataAccess", "src\server\services\Identity\Identity.DataAccess\Identity.DataAccess.csproj", "{3D2D793F-80B1-49E4-93BC-54469581A7DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\web\services\Identity\Identity.Domain\Identity.Domain.csproj", "{6C045C85-DC2A-4495-8397-EA69C858449D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\server\services\Identity\Identity.Domain\Identity.Domain.csproj", "{6C045C85-DC2A-4495-8397-EA69C858449D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{F33D3732-29D6-46E2-BB75-0A30F87EA83A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{6473D81F-419D-4B47-959E-0BB0795B109A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Blazor", "src\client\Inspirer.Blazor\Inspirer.Blazor.csproj", "{BCEE0E92-BF22-4956-BC6F-960AE72411B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure", "src\client\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj", "{99116CE5-FB04-4B42-869A-8161AC4A625A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Mvvm", "src\client\Inspirer.Mvvm\Inspirer.Mvvm.csproj", "{26AD1BE9-EE58-4D52-99ED-7286C22C4E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.Infrastructure.Abstractions", "src\client\Inspirer.Infrastructure.Abstractions\Inspirer.Infrastructure.Abstractions.csproj", "{931F6EF9-AFA8-4883-BA12-88AC837A209A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.UseCases", "src\client\Inspirer.UseCases\Inspirer.UseCases.csproj", "{C37C0800-4B52-412E-B59C-485707EEF25E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspirer.UI", "src\client\Inspirer.UI\Inspirer.UI.csproj", "{22F221C9-5099-42AF-8F98-CBEE13DD58C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +59,12 @@ Global
 		{9AEF1C3F-BB64-4B08-88E6-17AFED3F55EA} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
 		{6C045C85-DC2A-4495-8397-EA69C858449D} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
 		{3D2D793F-80B1-49E4-93BC-54469581A7DD} = {F33D3732-29D6-46E2-BB75-0A30F87EA83A}
+		{BCEE0E92-BF22-4956-BC6F-960AE72411B3} = {6473D81F-419D-4B47-959E-0BB0795B109A}
+		{99116CE5-FB04-4B42-869A-8161AC4A625A} = {6473D81F-419D-4B47-959E-0BB0795B109A}
+		{26AD1BE9-EE58-4D52-99ED-7286C22C4E11} = {6473D81F-419D-4B47-959E-0BB0795B109A}
+		{931F6EF9-AFA8-4883-BA12-88AC837A209A} = {6473D81F-419D-4B47-959E-0BB0795B109A}
+		{C37C0800-4B52-412E-B59C-485707EEF25E} = {6473D81F-419D-4B47-959E-0BB0795B109A}
+		{22F221C9-5099-42AF-8F98-CBEE13DD58C4} = {6473D81F-419D-4B47-959E-0BB0795B109A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79E05E9E-4BC0-41F2-B2A2-6FDBF0BB4EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -71,5 +91,29 @@ Global
 		{6C045C85-DC2A-4495-8397-EA69C858449D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C045C85-DC2A-4495-8397-EA69C858449D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C045C85-DC2A-4495-8397-EA69C858449D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEE0E92-BF22-4956-BC6F-960AE72411B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEE0E92-BF22-4956-BC6F-960AE72411B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEE0E92-BF22-4956-BC6F-960AE72411B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEE0E92-BF22-4956-BC6F-960AE72411B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99116CE5-FB04-4B42-869A-8161AC4A625A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99116CE5-FB04-4B42-869A-8161AC4A625A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99116CE5-FB04-4B42-869A-8161AC4A625A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99116CE5-FB04-4B42-869A-8161AC4A625A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AD1BE9-EE58-4D52-99ED-7286C22C4E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AD1BE9-EE58-4D52-99ED-7286C22C4E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AD1BE9-EE58-4D52-99ED-7286C22C4E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AD1BE9-EE58-4D52-99ED-7286C22C4E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931F6EF9-AFA8-4883-BA12-88AC837A209A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931F6EF9-AFA8-4883-BA12-88AC837A209A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931F6EF9-AFA8-4883-BA12-88AC837A209A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931F6EF9-AFA8-4883-BA12-88AC837A209A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37C0800-4B52-412E-B59C-485707EEF25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37C0800-4B52-412E-B59C-485707EEF25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37C0800-4B52-412E-B59C-485707EEF25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37C0800-4B52-412E-B59C-485707EEF25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F221C9-5099-42AF-8F98-CBEE13DD58C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F221C9-5099-42AF-8F98-CBEE13DD58C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F221C9-5099-42AF-8F98-CBEE13DD58C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F221C9-5099-42AF-8F98-CBEE13DD58C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
