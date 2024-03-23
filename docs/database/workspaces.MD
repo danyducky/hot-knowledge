@@ -12,9 +12,8 @@ erDiagram
     }
 
     Members {
-        Id uuid PK
-        UserId int4
-        WorkspaceId uuid FK
+        UserId int4 PK
+        WorkspaceId uuid PK
         Status MemberStatus
     }
 
