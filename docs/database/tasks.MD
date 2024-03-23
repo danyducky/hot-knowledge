@@ -6,7 +6,8 @@ title: Tasks
 erDiagram
     Tasks {
         Id uuid PK
-        AssigneeUserId int FK
+        AssigneeUserId int
+        CreatedByUserId int
 
         Number int
         Summary text
