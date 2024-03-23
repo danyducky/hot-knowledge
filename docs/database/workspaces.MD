@@ -11,7 +11,6 @@ erDiagram
     Workspaces {
         Id uuid PK
         Name varchar
-
     }
 
     Members {
