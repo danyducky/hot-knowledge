@@ -3,7 +3,7 @@ namespace Inspirer.Infrastructure.Abstractions.Models.Identity;
 /// <summary>
 /// User login data transfer object.
 /// </summary>
-public class UserLoginDto
+public record UserLoginDto
 {
     /// <summary>
     /// User email address.
