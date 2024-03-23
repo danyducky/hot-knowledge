@@ -8,6 +8,7 @@ erDiagram
     Workspaces ||--o| Members : ""
     Workspaces {
         Id uuid PK
+        OwnerUserId int
         Name varchar
     }
 
