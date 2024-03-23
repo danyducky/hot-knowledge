@@ -9,7 +9,9 @@ erDiagram
         TaskId uuid
         UserId int
 
+        Description text
         TimeSpent time
+
         CreatedAt timestamp
     }
 ```
