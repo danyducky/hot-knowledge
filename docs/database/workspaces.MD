@@ -5,15 +5,16 @@ title: Workspaces
 ---
 
 erDiagram
-    Workspaces ||--|{ Members : ""
+    Workspaces |o--|| Members : ""
     Workspaces {
         Id uuid PK
         Name varchar
     }
 
     Members {
-        UserId int4 PK
-        WorkspaceId uuid PK
+        Id uuid PK
+        UserId int4
+        WorkspaceId uuid FK
         Status MemberStatus
     }
 
