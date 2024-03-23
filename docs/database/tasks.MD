@@ -9,6 +9,8 @@ erDiagram
         AssigneeUserId int
         CreatedByUserId int
 
+        ProjectId uuid
+
         Number int
         Summary text
         Shortcut varchar
