@@ -1,8 +1,8 @@
-using Inspirer.Client.Infrastructure.Dependencies;
+using Inspirer.Blazor.Infrastructure.Dependencies;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
-namespace Inspirer.Client.Infrastructure;
+namespace Inspirer.Blazor.Infrastructure;
 
 /// <summary>
 /// Application hosting extensions.

@@ -1,7 +1,7 @@
 using Inspirer.Infrastructure.Abstractions.Services;
 using Inspirer.Infrastructure.Services;
 
-namespace Inspirer.Client.Infrastructure.Dependencies;
+namespace Inspirer.Blazor.Infrastructure.Dependencies;
 
 /// <summary>
 /// Application infrastructure module.
@@ -14,9 +14,24 @@ public static class InfrastructureModule
     /// <param name="services">Services collection.</param>
     /// <param name="configuration">Application configuration.</param>
     /// <returns>Services collection.</returns>
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+    public static void AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddHttpClient<IIdentityService, IdentityService>();
-        return services;
+        services.AddApiServices(configuration);
+    }
+
+    private static void AddApiServices(this IServiceCollection services, IConfiguration configuration)
+    {
+        // Add an Http Client to the main API service.
+        services.AddHttpClient<ApiService>(client =>
+        {
+            var url = configuration["Application:ApiGateway"];
+
+            ArgumentNullException.ThrowIfNull(url, nameof(url));
+
+            client.BaseAddress = new Uri(url);
+        });
+
+        // Add APIs interfaces.
+        services.AddSingleton<IIdentityService>(provider => provider.GetRequiredService<ApiService>());
     }
 }
