@@ -7,9 +7,10 @@ erDiagram
     Projects |o--|| Statuses : ""
     Projects {
         Id uuid PK
-        WorkspaceId uuid FK
-        ClientId uuid FK
+        WorkspaceId uuid
+        ClientId uuid
         StatusId int4 FK
+        CreatedByUserId int4
 
         Name varchar
         Shortcut varchar
