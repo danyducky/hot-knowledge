@@ -1,12 +1,10 @@
 
 ```mermaid
-
 ---
 title: Workspaces
 ---
 
 erDiagram
-
     Workspaces ||--|{ Members : ""
     Workspaces {
         Id uuid PK
