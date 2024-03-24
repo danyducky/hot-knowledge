@@ -14,7 +14,7 @@ public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
     /// <summary>
     /// Property changed event.
     /// </summary>
-    public event PropertyChangedEventHandler? PropertyChanged;
+    public event PropertyChangedEventHandler PropertyChanged;
 
     /// <summary>
     /// View model cancellation token.
