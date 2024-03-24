@@ -18,6 +18,9 @@ public interface IRouteViewModelParameters
     string Name { get; set; }
 }
 
+/// <summary>
+/// TODO: Remove this.
+/// </summary>
 public class RouteViewModel : BaseViewModel, IWithParameters<IRouteViewModelParameters>
 {
     private readonly INavigationService navigationService;
