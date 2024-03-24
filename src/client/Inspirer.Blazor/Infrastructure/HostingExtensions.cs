@@ -27,6 +27,7 @@ public static class HostingExtensions
     private static void AddModulesServices(IServiceCollection services, IConfiguration configuration)
     {
         services.AddInfrastructureServices(configuration);
+        services.AddMvvmServices();
     }
 
     /// <summary>
