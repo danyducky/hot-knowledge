@@ -19,7 +19,7 @@ public interface INavigationService
     /// </summary>
     /// <param name="assignParameters">Assign parameters delegate.</param>
     /// <typeparam name="TViewModel">View model type.</typeparam>
-    /// <typeparam name="TParameters">View model assignParameters type.</typeparam>
+    /// <typeparam name="TParameters">View model parameters type.</typeparam>
     void NavigateTo<TViewModel, TParameters>(Action<TParameters> assignParameters)
         where TViewModel : BaseViewModel, IWithParameters<TParameters>;
 }
