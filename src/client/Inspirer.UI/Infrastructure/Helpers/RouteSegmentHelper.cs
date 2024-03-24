@@ -17,7 +17,7 @@ public static class RouteSegmentHelper
     {
         foreach (var segment in route.Segments)
         {
-            var part = segment.Parts.First();
+            var part = segment.Parts[0];
 
             if (string.IsNullOrWhiteSpace(part.Name))
             {
