@@ -26,10 +26,10 @@ public struct ComponentInfo
     /// <summary>
     /// Component route properties.
     /// </summary>
-    public IEnumerable<PropertyInfo> RouteProperties { get; init; }
+    public required IEnumerable<PropertyInfo> RouteProperties { get; init; }
 
     /// <summary>
     /// Component query properties.
     /// </summary>
-    public IEnumerable<PropertyInfo> QueryProperties { get; init; }
+    public required IEnumerable<PropertyInfo> QueryProperties { get; init; }
 }
