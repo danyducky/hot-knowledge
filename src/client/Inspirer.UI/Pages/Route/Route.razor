@@ -1,0 +1,33 @@
+@using Inspirer.Mvvm.ViewModels.Route
+@page "/Route/{tExT}"
+@inherits MvvmComponent<RouteViewModel, IRouteViewModelParameters>
+@implements IRouteViewModelParameters
+
+<div>
+    <p>
+        Value: @ViewModel.Route
+    </p>
+
+    <p>
+        Parameters text: @ViewModel.Parameters.Text
+        Parameters name: @ViewModel.Parameters.Name
+    </p>
+
+    <p>
+        Input value: <input @bind="@ViewModel.Route" @bind:event="oninput">
+    </p>
+
+    <p>
+        <button @onclick="ViewModel.GoToRoute">Go to Route</button>
+    </p>
+
+</div>
+
+@code {
+    /// <inheritdoc />
+    [Parameter]
+    public string Text { get; set; }
+
+    [SupplyParameterFromQuery]
+    public string Name { get; set; }
+}

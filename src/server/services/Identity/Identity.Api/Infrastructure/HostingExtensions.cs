@@ -1,8 +1,8 @@
-using Identity.Api.Infrastructure.DI;
+using Identity.Api.Infrastructure.Dependencies;
 using Inspirer.Infrastructure.Extensions;
 using Inspirer.Infrastructure.Options;
 
-namespace Identity.Api.Configuration;
+namespace Identity.Api.Infrastructure;
 
 /// <summary>
 /// Application hosting extensions.
@@ -22,13 +22,16 @@ public static class HostingExtensions
             RedisOptions = builder.Configuration.GetSection("Redis").Get<RedisOptions>(),
         }, consumerAssembly: typeof(Program).Assembly);
 
-        builder.Services.AddInfrastructure(builder.Configuration);
-
-        builder.Services.AddMapper();
+        AddModulesServices(builder.Services, builder.Configuration);
 
         builder.Services.AddControllers();
 
         return builder.Build();
+    }
+
+    private static void AddModulesServices(IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddApplicationServices(configuration);
     }
 
     /// <summary>
