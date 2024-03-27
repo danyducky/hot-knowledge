@@ -26,7 +26,7 @@ public class RouteViewModel : BaseViewModel, IWithParameters<IRouteViewModelPara
     private readonly INavigationService navigationService;
 
     /// <inheritdoc />
-    public IRouteViewModelParameters Parameters { get; set; }
+    public IRouteViewModelParameters Parameters { get; }
 
     /// <summary>
     /// Route text.
@@ -36,17 +36,22 @@ public class RouteViewModel : BaseViewModel, IWithParameters<IRouteViewModelPara
     /// <summary>
     /// Constructor.
     /// </summary>
+    /// <param name="parameters">View model parameters.</param>
     /// <param name="navigationService">Navigation service.</param>
-    public RouteViewModel(INavigationService navigationService)
+    public RouteViewModel(
+        IRouteViewModelParameters parameters,
+        INavigationService navigationService)
     {
         this.navigationService = navigationService;
+
+        Parameters = parameters;
     }
 
     public void GoToRoute()
     {
         navigationService.NavigateTo<RouteViewModel, IRouteViewModelParameters>(parameters =>
         {
-            parameters.Text = "Qwerty";
+            parameters.Text = Route;
             parameters.Name = "Danil";
         });
     }

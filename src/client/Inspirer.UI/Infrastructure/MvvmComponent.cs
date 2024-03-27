@@ -14,9 +14,11 @@ public abstract class MvvmComponent<TViewModel, TViewModelParameters> : MvvmComp
     where TViewModelParameters : class
 {
     /// <inheritdoc />
-    protected override void OnViewModelCreated(TViewModel viewModel)
+    protected override TViewModel CreateViewModel()
     {
-        viewModel.Parameters = this as TViewModelParameters;
+        var parameters = this as TViewModelParameters;
+
+        return ViewModelFactory.Create<TViewModel>(parameters);
     }
 }
 
@@ -44,9 +46,7 @@ public abstract class MvvmComponent<TViewModel> : ComponentBase, IDisposable
     protected override async Task OnInitializedAsync()
     {
         // Create a view model.
-        ViewModel = ViewModelFactory.Create<TViewModel>();
-
-        OnViewModelCreated(ViewModel);
+        ViewModel = CreateViewModel();
 
         // Load view model.
         ViewModel.IsBusy = true;
@@ -65,12 +65,12 @@ public abstract class MvvmComponent<TViewModel> : ComponentBase, IDisposable
     }
 
     /// <summary>
-    /// Method invoked when view model successfully created.
+    /// Creates <see cref="TViewModel"/> instance.
     /// </summary>
-    /// <param name="viewModel">View model instance.</param>
-    protected virtual void OnViewModelCreated(TViewModel viewModel)
+    /// <returns>View model instance.</returns>
+    protected virtual TViewModel CreateViewModel()
     {
-        // Can be overriden by other components.
+        return ViewModelFactory.Create<TViewModel>();
     }
 
     private void Subscribe(TViewModel viewModel)
