@@ -28,10 +28,8 @@ internal static class RouteTemplateHelper
     public static RouteTemplate GetRouteTemplate(Type componentType)
     {
         var routeAttribute = componentType.GetCustomAttribute<RouteAttribute>();
-        if (routeAttribute is null)
-        {
-            return null;
-        }
+
+        ArgumentNullException.ThrowIfNull(routeAttribute, nameof(routeAttribute));
 
         return TemplateParser.Parse(routeAttribute.Template);
     }
