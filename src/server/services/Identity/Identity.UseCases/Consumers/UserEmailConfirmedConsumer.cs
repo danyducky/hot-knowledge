@@ -34,7 +34,3 @@ public class UserEmailConfirmedConsumer : IConsumer<UserEmailConfirmedEvent>
         await userManager.UpdateAsync(user);
     }
 }
-
-
-
-
