@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\building-blocks\Inspirer.Infrastructure\Inspirer.Infrastructure.csproj" />
-      <ProjectReference Include="..\Identity.DataAccess\Identity.DataAccess.csproj" />
+      <ProjectReference Include="..\Identity.UseCases\Identity.UseCases.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Extensions.Hosting.AsyncInitialization" Version="3.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
