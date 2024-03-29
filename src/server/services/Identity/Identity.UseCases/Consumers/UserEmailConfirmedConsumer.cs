@@ -1,4 +1,3 @@
-using System.Net.Mime;
 using Identity.Domain.Entities;
 using Inspirer.Contracts.Identity;
 using MassTransit;
