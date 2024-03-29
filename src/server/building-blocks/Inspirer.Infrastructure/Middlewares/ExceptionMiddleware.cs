@@ -88,6 +88,7 @@ public class ExceptionMiddleware : IMiddleware
 
     private static string GetExceptionTitle(Exception exception) => exception switch
     {
+        ValidationException => "Validation",
         UnauthorizedException => "Unauthorized",
         ForbiddenException => "Forbidden",
         NotFoundException => "Not Found",
