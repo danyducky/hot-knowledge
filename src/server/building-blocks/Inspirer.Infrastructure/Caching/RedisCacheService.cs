@@ -59,7 +59,7 @@ internal class RedisCacheService : ICacheService
 
     /// <inheritdoc />
     public async Task RemoveAsync(string key, CancellationToken cancellationToken = default)
-        => await distributedCache.RefreshAsync(key, cancellationToken);
+        => await distributedCache.RemoveAsync(key, cancellationToken);
 
     /// <inheritdoc />
     public void Set<T>(string key, T value, TimeSpan? slidingExpiration = null, DateTimeOffset? absoluteExpiration = null)

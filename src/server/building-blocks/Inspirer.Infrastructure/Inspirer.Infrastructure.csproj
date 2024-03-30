@@ -10,10 +10,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="13.0.1" />
       <PackageReference Include="MassTransit" Version="8.2.0-develop.1699" />
       <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.0-develop.1699" />
       <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
       <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.0-preview.2.24128.4" />
     </ItemGroup>
 

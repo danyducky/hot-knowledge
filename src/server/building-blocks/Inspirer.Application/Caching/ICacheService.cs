@@ -11,7 +11,7 @@ public interface ICacheService
     /// <param name="key">Key.</param>
     /// <typeparam name="T">Object type.</typeparam>
     /// <returns>Object.</returns>
-    T Get<T>(string key);
+    T? Get<T>(string key);
 
     /// <summary>
     /// Gets cached object by given key asynchronously.
@@ -20,7 +20,7 @@ public interface ICacheService
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <typeparam name="T">Object type.</typeparam>
     /// <returns>Object.</returns>
-    Task<T> GetAsync<T>(string key, CancellationToken cancellationToken = default);
+    Task<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Refresh cache by given key.

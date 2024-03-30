@@ -6,13 +6,13 @@ services:
     image: ${DOCKER_REGISTRY-}identity.api
     build:
       context: ../
-      dockerfile: src/services/Identity/Identity.Api/Dockerfile
+      dockerfile: src/server/services/Identity/Identity.Api/Dockerfile
       
+  identity.database:
+    image: "postgres"
+
   rabbitmq:
     image: "rabbitmq:3-management"
     
   redis:
     image: "redis:alpine"
-    
-  postgres:
-    image: "postgres"

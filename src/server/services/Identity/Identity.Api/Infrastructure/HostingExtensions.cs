@@ -1,4 +1,5 @@
 using Identity.Api.Infrastructure.Dependencies;
+using Identity.UseCases.Consumers;
 using Inspirer.Infrastructure.Extensions;
 using Inspirer.Infrastructure.Options;
 
@@ -20,7 +21,7 @@ public static class HostingExtensions
         {
             RabbitMqOptions = builder.Configuration.GetSection("RabbitMQ").Get<RabbitMqOptions>(),
             RedisOptions = builder.Configuration.GetSection("Redis").Get<RedisOptions>(),
-        }, consumerAssembly: typeof(Program).Assembly);
+        }, consumerAssembly: typeof(UserEmailConfirmedConsumer).Assembly);
 
         AddModulesServices(builder.Services, builder.Configuration);
 
